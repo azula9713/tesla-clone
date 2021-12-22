@@ -10,7 +10,7 @@ function Header() {
   return (
     <HeaderContainer>
       <a>
-        <img src="src/assets/images/logo.svg" alt="logo" />
+        <img src="src/app/assets/images/logo.svg" alt="logo" />
       </a>
       <MenuContainer>
         <a href="#">Model S</a>

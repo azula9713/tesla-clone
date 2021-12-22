@@ -31,7 +31,7 @@ function ProductSection(props: ProductContainerProps) {
             )}
           </ButtonGroup>
         </Fade>
-        <DownArrow src="src/assets/images/down-arrow.svg" />
+        <DownArrow src="src/app/assets/images/down-arrow.svg" />
       </Actions>
     </ProductContainer>
   );
