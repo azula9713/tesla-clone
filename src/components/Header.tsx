@@ -1,11 +1,16 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+
+import { selectCars } from "../features/car/carSlice";
+
 interface styledProps {
   show: boolean;
 }
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const cars = useSelector(selectCars);
 
   return (
     <HeaderContainer>
@@ -13,13 +18,13 @@ function Header() {
         <img src="src/app/assets/images/logo.svg" alt="logo" />
       </a>
       <MenuContainer>
-        <a href="#">Model S</a>
-
-        <a href="#">Model 3</a>
-
-        <a href="#">Model X</a>
-
-        <a href="#">Model Y</a>
+        {cars &&
+          cars.length > 0 &&
+          cars.map((car: string, index: number) => (
+            <a key={index} href="#">
+              {car}
+            </a>
+          ))}
       </MenuContainer>
       <MenuAction>
         <a href="#">Shop</a>
