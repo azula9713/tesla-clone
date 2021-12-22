@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 interface ProductContainerProps {
   bgImage: string;
@@ -15,15 +16,21 @@ interface styledProps {
 function ProductSection(props: ProductContainerProps) {
   return (
     <ProductContainer bgImage={props.bgImage}>
-      <ItemText>
-        <h1>{props.title}</h1>
-        <p>{props.description}</p>
-      </ItemText>
+      <Fade bottom>
+        <ItemText>
+          <h1>{props.title}</h1>
+          <p>{props.description}</p>
+        </ItemText>
+      </Fade>
       <Actions>
-        <ButtonGroup>
-          <LeftButton>{props.lBtnText}</LeftButton>
-          {props.rBtntext !== "" && <RightButton>{props.rBtntext}</RightButton>}
-        </ButtonGroup>
+        <Fade bottom>
+          <ButtonGroup>
+            <LeftButton>{props.lBtnText}</LeftButton>
+            {props.rBtntext !== "" && (
+              <RightButton>{props.rBtntext}</RightButton>
+            )}
+          </ButtonGroup>
+        </Fade>
         <DownArrow src="src/assets/images/down-arrow.svg" />
       </Actions>
     </ProductContainer>
