@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
+import DownArrowIcon from "../app/assets/images/down-arrow.svg";
+
 interface ProductContainerProps {
   bgImage: string;
   title: string;
@@ -31,7 +33,7 @@ function ProductSection(props: ProductContainerProps) {
             )}
           </ButtonGroup>
         </Fade>
-        <DownArrow src="src/app/assets/images/down-arrow.svg" />
+        <DownArrow src={DownArrowIcon} />
       </Actions>
     </ProductContainer>
   );

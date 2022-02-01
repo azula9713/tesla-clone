@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 import ProductSection from "../components/ProductSection";
+import ModelSImage from "../app/assets/images/model-s.jpg";
+import Model3Image from "../app/assets/images/model-3.jpg";
+import ModelXImage from "../app/assets/images/model-x.jpg";
+import ModelYImage from "../app/assets/images/model-y.jpg";
+import SolarPanelImage from "../app/assets/images/solar-panel.jpg";
+import SolarRoofImage from "../app/assets/images/solar-roof.jpg";
+import AccessoriesImage from "../app/assets/images/accessories.jpg";
 
 function HomePage() {
   return (
@@ -8,49 +15,49 @@ function HomePage() {
       <ProductSection
         title="Model S"
         description="Order Online for Touchless Delivery"
-        bgImage="src/app/assets/images/model-s.jpg"
+        bgImage={ModelSImage}
         lBtnText="Custom Order"
         rBtntext="Existing Inventory"
       />
       <ProductSection
         title="Model 3"
         description="Order Online for Touchless Delivery"
-        bgImage="src/app/assets/images/model-3.jpg"
+        bgImage={Model3Image}
         lBtnText="Custom Order"
         rBtntext="Existing Inventory"
       />
       <ProductSection
         title="Model X"
         description="Order Online for Touchless Delivery"
-        bgImage="src/app/assets/images/model-x.jpg"
+        bgImage={ModelXImage}
         lBtnText="Custom Order"
         rBtntext="Existing Inventory"
       />
       <ProductSection
         title="Model Y"
         description="Order Online for Touchless Delivery"
-        bgImage="src/app/assets/images/model-y.jpg"
+        bgImage={ModelYImage}
         lBtnText="Custom Order"
         rBtntext="Existing Inventory"
       />
       <ProductSection
         title="Solar Panels"
         description="Money-back guarantee. No questions asked."
-        bgImage="src/app/assets/images/solar-panel.jpg"
+        bgImage={SolarPanelImage}
         lBtnText="Order Now"
         rBtntext="Learn more"
       />
       <ProductSection
         title="Solar Roofs"
         description="Produce Clean Energy From Your Roof."
-        bgImage="src/app/assets/images/solar-roof.jpg"
+        bgImage={SolarRoofImage}
         lBtnText="Order Now"
         rBtntext="Learn more"
       />
       <ProductSection
         title="Accessories"
         description=""
-        bgImage="src/app/assets/images/accessories.jpg"
+        bgImage={AccessoriesImage}
         lBtnText="Shop Now"
         rBtntext=""
       />

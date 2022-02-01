@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 
 import { selectCars } from "../features/car/carSlice";
+import logo from "../app/assets/images/logo.svg";
 
 interface styledProps {
   show: boolean;
@@ -15,7 +16,7 @@ function Header() {
   return (
     <HeaderContainer>
       <a>
-        <img src="src/app/assets/images/logo.svg" alt="logo" />
+        <img src={logo} alt="logo" />
       </a>
       <MenuContainer>
         {cars &&
